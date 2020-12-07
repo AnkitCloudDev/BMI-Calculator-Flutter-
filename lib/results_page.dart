@@ -5,7 +5,7 @@ import 'package:bmi_calculator/widgets/build_gesture.dart';
 import 'package:flutter/material.dart';
 
     class ResultsPage extends StatelessWidget {
-      final String bmiResult,interPretation,resultText;
+      final String bmiResult,interpretation,resultText;
 
       @override
       Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ import 'package:flutter/material.dart';
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
-                   Text(interPretation.toUpperCase(),
+                   Text(interpretation.toUpperCase(),
                        textAlign: TextAlign.center,
                    style: normal),
                     Text(bmiResult
@@ -58,5 +58,5 @@ import 'package:flutter/material.dart';
         );
       }
 
-      ResultsPage({@ required this.bmiResult,@required this.interPretation,@required this.resultText});
+      ResultsPage({@ required this.bmiResult,@required this.interpretation,@required this.resultText});
 }
