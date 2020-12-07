@@ -1,5 +1,7 @@
 import 'package:bmi_calculator/calculator.dart';
 import 'package:bmi_calculator/results_page.dart';
+import 'package:bmi_calculator/widgets/build_gesture.dart';
+import 'package:bmi_calculator/widgets/round_icon_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -246,56 +248,6 @@ class _InputPageState extends State<InputPage> {
   }
 }
 
-class BuildGesture extends StatelessWidget {
-  final Function onTap;
-  final String s;
-  const BuildGesture({
-    Key key, @required this.onTap, this.s,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        padding: EdgeInsets.only(bottom: 20.0),
-        color: Color(0xFFEB1555),
-        margin: EdgeInsets.only(top:10.0),
-        width: double.infinity,
-        height: 80.0,
-        child: Center(
-
-          child: (
-
-          Text(s,
-          style:TextStyle(
-            fontSize: 30.0,
-            fontWeight: FontWeight.bold,
 
 
-          ),)
-          ),
-        ),
-      ),
-    );
-  }
-}
 
-class RoundIconButton  extends StatelessWidget {
-  final Icon icon;
-  final Function onPressed;
-  RoundIconButton({this.icon,@required this.onPressed});
-  @override
-  Widget build(BuildContext context) {
-    return RawMaterialButton(
-      elevation: 6.0,
-      shape: CircleBorder(),
-      fillColor: Color(0xFF4C4F5E),
-      constraints: BoxConstraints.tightFor(
-        width: 56.0,
-        height: 56.0
-      ), onPressed: onPressed,
-child: icon ,
-    );
-  }
-}
