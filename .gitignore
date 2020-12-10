@@ -1,5 +1,5 @@
 # Miscellaneous
-.gitignore
+
 *.class
 *.lock
 *.log
